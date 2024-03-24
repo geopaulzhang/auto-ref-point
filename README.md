@@ -1,9 +1,21 @@
-This python code selects the optimal reference point for time series InSAR analysis. It requires input of a shapefile for the Area of Interest (AOI), and input the products from TOPS stack processing from ISCE. 
+This python script automatically selects the optimal reference point for SBAS InSAR analysis. When provided multiple Area of Interest (AOIs, e.g., polygons for a shapefile), the script outputs optimal reference points for each polygon. It requires users to install MintPy, gdal, and other basic python packages as prerequisites. Details of the procedure of reference point selection consisting of five steps are described in the paper "Automated Reference Points Selection for InSAR Time Series Analysis on Segmented Wetlands in California", Zhang et al. (in review). A pre-print version is available on TechRxiv: https://techrxiv.org/doi/full/10.36227/techrxiv.24718740.v1 
 
-The code automatically finds the optimal reference point for each of the polygons in the shapefile. It requires MintPy, gdal, and other basic python packages.
+Input data for the script include:
 
-This code is associated with a paper "Automated Reference Points Selection for InSAR Time Series Analysis on Segmented Wetlands in California", Zhang et al. (in review). 
-A pre-print version is available on TechRxiv: https://techrxiv.org/doi/full/10.36227/techrxiv.24718740.v1
+1. a shapefile for the Area of Interest (AOI) (may include one or multiple polygons) with a WGS84 geographic coordinate system
+2. the products from TOPS stack processing from ISCE, i.e., coregistered spatial coherence and connected component
+
+Final output products include:
+
+1. A list of optimal reference points for each shapefile. By the default, the first reference point is selected for the rest of the SBAS procedure (Fig. 3f).
+
+Intermediate output products for each of the five steps:
+
+1. [Step 2] A map of percentage of InSAR pairs satisfying the criteria with a coherence greater than 0.9 (Fig. 3a)
+2. [Step 3] For each AOI pixel, a map showing the percentage of a non-AOI pixel connected to the AOI pixel (Fig. 3b)
+3. [Step 4a] A map of reference candidates (Fig. 3c)
+4. [Step 4b] A connected component map for the reference candidates representing their spatial distribution (Fig. 3d)
+5. [Step 5] A connected component map representing the coherence path to the AOI (Fig. 3e)
 
 For citation, please use this:
 Boya Zhang , Erin L. Hestir , Zhang Yunjun , et al. Automate Reference Points Selection for InSAR Time Series Analysis on Segmented Wetlands in California. TechRxiv. December 05, 2023.
