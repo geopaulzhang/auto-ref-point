@@ -1,4 +1,6 @@
-This python script automatically selects the optimal reference point for SBAS InSAR analysis. When provided multiple Area of Interest (AOIs, e.g., polygons for a shapefile), the script outputs optimal reference points for each polygon. It requires users to install MintPy, gdal, and other basic python packages as prerequisites. Details of the procedure of reference point selection consisting of five steps are described in the paper "Automated Reference Points Selection for InSAR Time Series Analysis on Segmented Wetlands in California", Zhang et al. (in review). A pre-print version is available on TechRxiv: https://techrxiv.org/doi/full/10.36227/techrxiv.24718740.v1 
+This python script automatically selects the optimal reference point for SBAS InSAR analysis. When provided multiple Area of Interest (AOIs, e.g., polygons for a shapefile), the script outputs optimal reference points for each polygon. It requires users to install MintPy, gdal, and other basic python packages as prerequisites. Details of the procedure of reference point selection consisting of five steps are described in the paper 
+
+Zhang, B., Hestir, E., Yunjun, Z., Reiter, M.E., Viers, J.H., Schaffer-Smith, D., Sesser, K. and Oliver-Cabrera, T., 2024. Automated Reference Points Selection for InSAR Time Series Analysis on Segmented Wetlands. IEEE Geoscience and Remote Sensing Letters. https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10504695
 
 Input data for the script include:
 
