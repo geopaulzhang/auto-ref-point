@@ -1,0 +1,12 @@
+gdal
+geopandas
+h5py
+matplotlib
+mintpy
+numpy
+pandas
+pyproj
+scipy
+seaborn
+shapely
+skimage
